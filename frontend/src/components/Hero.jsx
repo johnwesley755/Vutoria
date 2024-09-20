@@ -31,7 +31,7 @@ const Hero = () => {
 
         {/* Buttons Section */}
         <div className="flex max-xs:flex-col gap-2">
-          <NavLink to={""} className={"btn_dark_rounded flexCenter"}>
+          <NavLink to={"/"} className={"btn_dark_rounded flexCenter"}>
             Shop now
           </NavLink>
           <NavLink to={""} className={"btn_dark_rounded flexCenter gap-x-2"}>
