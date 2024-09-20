@@ -66,7 +66,7 @@ const Header = () => {
             </NavLink>
             <NavLink
               to={"logout"}
-              className={`md:flex block btn_secondary_rounded flexCenter gap-x-2 medium-16`}
+              className={`md:flex block btn_secondary_rounded flexCenter gap-x-2 medium-16 `}
             >
               <img src={logout} alt="Logout" height={19} width={19} />
               Logout

@@ -7,7 +7,8 @@ import Cart from "./pages/Cart";
 import Product from "./pages/Product";
 import Login from "./pages/Login";
 import Footer from "./components/Footer";
-//import images
+
+// Import banner images
 import bannerimg from "./assets/bannermens.png";
 import womenImg from "./assets/bannerwomens.png";
 import kidsImg from "./assets/bannerkids.png";
@@ -31,9 +32,8 @@ const App = () => {
             path="/kids"
             element={<Category category="kid" banner={kidsImg} />}
           />
-          <Route path='/product' element={<Product />}>
-            <Route path=":productId" element={<Product />}></Route>
-          </Route>
+          {/* Use a dynamic route to load products */}
+          <Route path="/product/:productId" element={<Product />} />
           <Route path="/cart-page" element={<Cart />} />
           <Route path="/login" element={<Login />} />
         </Routes>

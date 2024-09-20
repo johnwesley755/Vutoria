@@ -73,7 +73,7 @@
   }
 
   .btn_secondary_rounded  { 
-    @apply  medium-15 border border-secondary bg-secondary px-7 py-3 text-white transition-all hover:bg-[#ff6b1c] rounded-full 
+    @apply  medium-15 border border-secondary bg-secondary px-7 py-3 text-white transition-all hover:bg-[#faaffd] rounded-full 
   }
 
   .max-container {
@@ -85,7 +85,7 @@
   }
   
   .max_padd_container {
-    @apply mx-auto max-w-full px-6 lg:px-20;
+    @apply mx-auto max-w-full px-6 lg:px-36;
   }
 
   .flexCenter {
@@ -95,7 +95,6 @@
   .flexBetween {
     @apply flex items-center justify-between;
   }
-
   .flexStart {
     @apply flex items-center justify-start;
   }
