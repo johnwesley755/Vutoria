@@ -23,7 +23,7 @@ export default {
         },
       },
       backgroundImage: {
-        hero: "url('/src/assets/bn.png')",
+        hero: "url('/src/assets/banner-image.jpg')",
         banneroffer: "url('/src/assets/banneroffer.png')",
       },
       screens: {

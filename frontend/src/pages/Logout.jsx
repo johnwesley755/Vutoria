@@ -101,7 +101,7 @@ const Logout = () => {
     <section className="max_padd_container flexCenter flex-col pt-32">
       <ToastContainer /> {/* Toast container for showing notifications */}
       <div className="max-w[555px] h-[600px] bg-white m-auto px-14 py-10 rounded-md">
-        <h3 className="h3">Sign up</h3>
+        <h3 className="h3">Login</h3>
         
         <form onSubmit={handleSignIn}>
           <div className="flex flex-col gap-4 mt-7">
@@ -126,7 +126,7 @@ const Logout = () => {
             type="submit"
             className="btn_dark_rounded my-5 w-full !rounded-md"
           >
-            Sign In
+            Login
           </button>
         </form>
 
@@ -134,7 +134,7 @@ const Logout = () => {
           Don't have an Account?{" "}
           <Link to="/login">
             <span className="text-secondary underline cursor-pointer">
-              Don't have an Account? Sign Up
+            Sign up
             </span>
           </Link>
         </p>

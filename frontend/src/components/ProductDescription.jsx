@@ -49,7 +49,7 @@ const ProductDescription = () => {
       </div>
       <div>
         <p className="font-bold text-slate-700 text-[18px] my-2">
-          Share it on social media!
+          Influencer affiliaton
         </p>
         <a href="https://www.facebook.com/dialog/share?web:0019c3f40e96b348801ceb&display=popup&href={URL}&quote=ProductDescription&hashtag=#Vutoria">
           <Facebook className="mr-2 cursor-pointer" />
