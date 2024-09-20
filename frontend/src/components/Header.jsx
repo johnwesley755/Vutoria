@@ -1,21 +1,26 @@
-import React, { useState } from 'react';
-import { useContext } from 'react';
-import { Link, NavLink } from 'react-router-dom';
-import Navbar from './Navbar';
-import { MdClose, MdMenu } from 'react-icons/md';
-import { FaOpencart } from 'react-icons/fa';
-import { ShopContext } from '../Context/ShopContext';
+import React, { useState, useContext } from "react";
+import { Link, NavLink } from "react-router-dom";
+import Navbar from "./Navbar";
+import { MdClose, MdMenu } from "react-icons/md";
+import { FaOpencart } from "react-icons/fa";
+import { ShopContext } from "../Context/ShopContext";
 // Import images
 import logo from "../assets/logo.png";
-import logout from "../assets/logout.svg";
-import user from "../assets/user.svg";
+import logoutIcon from "../assets/logout.svg";
+import loginIcon from "../assets/user.svg";
 
 const Header = () => {
   const [menuOpened, setMenuOpened] = useState(false);
+  const [isAuthenticated, setIsAuthenticated] = useState(false); // Manage auth state
 
   // Toggle menu function
   const toggleMenu = () => setMenuOpened(!menuOpened);
-  const {getTotalCartItems} = useContext(ShopContext);
+  const { getTotalCartItems } = useContext(ShopContext);
+
+  // Mock function to toggle login/logout state
+  const handleAuthToggle = () => {
+    setIsAuthenticated(!isAuthenticated);
+  };
 
   return (
     <header className="fixed top-0 left-0 m-auto max_padd_container w-full bg-white ring-slate-900/5 z-10">
@@ -26,15 +31,16 @@ const Header = () => {
             <img
               src={logo}
               alt="Logo"
-              height={200}
-              width={170}
-            
+              className="block"
+              style={{ height: "50px", width: "auto" }} // Adjust for smaller screens
             />
           </Link>
         </div>
 
         {/* Navbar Desktop */}
-        <Navbar containerStyles={"hidden md:flex gap-x-5 xl:gap-x-10 medium-15"} />
+        <Navbar
+          containerStyles={"hidden md:flex gap-x-5 xl:gap-x-10 medium-15"}
+        />
 
         {/* Navbar Mobile */}
         <Navbar
@@ -55,29 +61,37 @@ const Header = () => {
           ) : (
             <MdClose
               className="md:hidden cursor-pointer hover:text-secondary mr-2 p-1 ring-1 ring-slate-900/30 h-8 w-8 rounded-full hover:ring-secondary"
-              onClick={toggleMenu} 
+              onClick={toggleMenu}
             />
           )}
 
           <div className="flexBetween sm:gap-x-6 cursor-pointer hover:text-secondary">
             <NavLink to={"cart-page"} className={"flex"}>
               <FaOpencart className="p-1 h-8 w-8 ring-slate-900/30 ring-1 rounded-full" />
-              <span className="relative flexCenter w-5 h-5 rounded-full bg-secondary text-white medium-14 -top-2">{getTotalCartItems()}</span>
+              <span className="relative flexCenter w-5 h-5 rounded-full bg-secondary text-white medium-14 -top-2">
+                {getTotalCartItems()}
+              </span>
             </NavLink>
-            <NavLink
-              to={"logout"}
-              className={`md:flex block btn_secondary_rounded flexCenter gap-x-2 medium-16 `}
-            >
-              <img src={logout} alt="Logout" height={19} width={19} />
-              Logout
-            </NavLink>
-            <NavLink
-              to={"login"}
-              className={"btn_secondary_rounded flexCenter gap-x-2 medium-16"}
-            >
-              <img src={user} alt="Login" height={19} width={19} />
-              Login
-            </NavLink>
+
+            {isAuthenticated ? (
+              <NavLink
+                to={"/logout"}
+                className="btn_secondary_rounded flexCenter gap-x-2 medium-16"
+                onClick={handleAuthToggle}
+              >
+                <img src={logoutIcon} alt="Logout" height={19} width={19} />
+                Logout
+              </NavLink>
+            ) : (
+              <NavLink
+                to={"/login"}
+                className="btn_secondary_rounded flexCenter gap-x-2 medium-16"
+                onClick={handleAuthToggle}
+              >
+                <img src={loginIcon} alt="Login" height={19} width={19} />
+                Login
+              </NavLink>
+            )}
           </div>
         </div>
       </div>
