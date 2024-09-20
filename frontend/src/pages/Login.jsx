@@ -2,7 +2,8 @@ import { useState } from 'react';
 import { createUserWithEmailAndPassword } from 'firebase/auth';
 import { auth } from "../firebaseConfig"; 
 import { Link } from 'react-router-dom'; // Import Link from react-router-dom
-
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 const Login = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
@@ -14,10 +15,11 @@ const Login = () => {
     e.preventDefault();
     try {
       const userCredential = await createUserWithEmailAndPassword(auth, email, password);
-      setSuccess("Account created successfully!");
+      toast.success("Account created successfully!");
+
       console.log(userCredential.user);
     } catch (error) {
-      setError(error.message);
+      toast.error(error.message);
     }
   };  
 

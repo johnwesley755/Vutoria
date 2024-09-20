@@ -12,10 +12,14 @@ import Footer from "./components/Footer";
 import bannerimg from "./assets/bannermens.png";
 import womenImg from "./assets/bannerwomens.png";
 import kidsImg from "./assets/bannerkids.png";
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 const App = () => {
   return (
     <main className="bg-primary text-tertiary">
+      <ToastContainer></ToastContainer>
       <BrowserRouter>
         <Header />
         <Routes>
