@@ -5,6 +5,10 @@ import product_rt_3 from "../assets/product_rt_3.png";
 import product_rt_4 from "../assets/product_rt_4.png";
 import {MdStar} from 'react-icons/md'
 import { ShopContext } from '../Context/ShopContext';
+
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 const ProductDisplay = (props) => {
     const {product} = props;
     const {addToCart} = useContext(ShopContext);
@@ -53,8 +57,10 @@ const ProductDisplay = (props) => {
                 </div>
               </div>
               <div className="flex flex-col gap-y-3 mb-4 max-2-[555px]">
-                <button onClick={ () => {
-                  addToCart(product.id)
+                <button onClick={ 
+                  () => {
+                    addToCart(product.id)
+                    // toast.info("Product added to the Cart Successfully");
                 }} className="btn_dark_outline !rounded-none uppercase regular-14 tracking-widest">
                   Add to cart
                 </button>

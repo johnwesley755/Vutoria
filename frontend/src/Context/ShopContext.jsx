@@ -1,6 +1,9 @@
 import { createContext, useState } from "react";
 import all_products from "../assets/all_products";
 
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 // Create the context
 export const ShopContext = createContext(null);
 
@@ -19,12 +22,15 @@ const ShopContextProvider = (props) => {
   // Add an item to the cart
   const addToCart = (itemId) => {
     setCartItems((prev) => ({ ...prev, [itemId]: prev[itemId] + 1 }));
+    toast.info("Product Added to the Cart Successfully")
     console.log(cartItems);
   };
 
   // Remove an item from the cart
   const removeFromCart = (itemId) => {
     setCartItems((prev) => ({ ...prev, [itemId]: prev[itemId] - 1 }));
+    toast.warning("Product Removed from the Cart Successfully")
+
   };
 
   // Get total cart amount
