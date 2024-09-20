@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "firebase": "^10.13.2",
+    "react-toastify": "^10.0.5"
+  }
+}
