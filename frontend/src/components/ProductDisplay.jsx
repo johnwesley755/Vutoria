@@ -1,21 +1,50 @@
-import React, { useContext } from 'react'
-import product_rt_1 from '../assets/product_rt_1.png'
+import React, { useState, useContext } from "react";
+import { useNavigate } from "react-router-dom";
+import product_rt_1 from "../assets/product_rt_1.png";
 import product_rt_2 from "../assets/product_rt_2.png";
 import product_rt_3 from "../assets/product_rt_3.png";
 import product_rt_4 from "../assets/product_rt_4.png";
-import {MdStar} from 'react-icons/md'
-import { ShopContext } from '../Context/ShopContext';
-
-import { toast, ToastContainer } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import { MdStar } from "react-icons/md";
+import { ShopContext } from "../Context/ShopContext";
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const ProductDisplay = (props) => {
-    const {product} = props;
-    const {addToCart} = useContext(ShopContext);
+  const { product } = props;
+  const { addToCart } = useContext(ShopContext);
+  const [selectedSize, setSelectedSize] = useState(null);
+  const [sizeError, setSizeError] = useState(false);
+
+  const navigate = useNavigate(); // For programmatic navigation
+
+  // Handle add to cart
+  const handleAddToCart = () => {
+    if (!selectedSize) {
+      setSizeError(true); // Show error if size not selected
+    } else {
+      setSizeError(false);
+      addToCart(product.id);
+
+      // Show the toast and navigate to cart on click
+      toast.success("Product added to cart successfully!", {
+        onClick: () => {
+          navigate("/cart"); // Redirect to cart when toast is clicked
+        },
+        autoClose: 3000, // Auto close the toast after 3 seconds
+        pauseOnHover: true, // Pause on hover
+        closeOnClick: true, // Close toast on click
+      });
+    }
+  };
+
+  const handleSizeClick = (size) => {
+    setSelectedSize(size); // Update selected size
+  };
+
   return (
     <section className="">
       <div className="flex flex-col gap-14 xl:flex-row">
-        {/*left side*/}
+        {/* Left side */}
         <div className="flex gap-x-2 xl:flex-1">
           <div className="flex flex-col gap-[7px] flex-wrap">
             <img src={product_rt_1} alt="prdctImg" className="max-h-[99px]" />
@@ -27,7 +56,8 @@ const ProductDisplay = (props) => {
             <img src={product.image} alt="" />
           </div>
         </div>
-        {/*right side*/}
+
+        {/* Right side */}
         <div className="flex-col flex xl:flex-[1.7]">
           <h3 className="h3">{product.name}</h3>
           <div className="flex gap-x-2 text-secondary medium-22">
@@ -43,25 +73,57 @@ const ProductDisplay = (props) => {
             <div className="mb-4">
               <h4 className="bold-16">Select Size:</h4>
               <div className="flex gap-3 my-3">
-                <div className="ring-2 ring-slate-900 h-10 w-10 flexCenter cursor-pointer">
+                <div
+                  className={`ring-2 h-10 w-10 flexCenter cursor-pointer ${
+                    selectedSize === "S"
+                      ? "ring-slate-900"
+                      : "ring-slate-900/10"
+                  }`}
+                  onClick={() => handleSizeClick("S")}
+                >
                   S
                 </div>
-                <div className="ring-2 ring-slate-900/10 h-10 w-10 flexCenter cursor-pointer">
+                <div
+                  className={`ring-2 h-10 w-10 flexCenter cursor-pointer ${
+                    selectedSize === "M"
+                      ? "ring-slate-900"
+                      : "ring-slate-900/10"
+                  }`}
+                  onClick={() => handleSizeClick("M")}
+                >
                   M
                 </div>
-                <div className="ring-2 ring-slate-900/10 h-10 w-10 flexCenter cursor-pointer">
+                <div
+                  className={`ring-2 h-10 w-10 flexCenter cursor-pointer ${
+                    selectedSize === "L"
+                      ? "ring-slate-900"
+                      : "ring-slate-900/10"
+                  }`}
+                  onClick={() => handleSizeClick("L")}
+                >
                   L
                 </div>
-                <div className="ring-2 ring-slate-900/10 h-10 w-10 flexCenter cursor-pointer">
+                <div
+                  className={`ring-2 h-10 w-10 flexCenter cursor-pointer ${
+                    selectedSize === "XL"
+                      ? "ring-slate-900"
+                      : "ring-slate-900/10"
+                  }`}
+                  onClick={() => handleSizeClick("XL")}
+                >
                   XL
                 </div>
               </div>
+
+              {sizeError && (
+                <p className="text-red-500">Please select a size!</p>
+              )}
+
               <div className="flex flex-col gap-y-3 mb-4 max-2-[555px]">
-                <button onClick={ 
-                  () => {
-                    addToCart(product.id)
-                    // toast.info("Product added to the Cart Successfully");
-                }} className="btn_dark_outline !rounded-none uppercase regular-14 tracking-widest">
+                <button
+                  onClick={handleAddToCart}
+                  className="btn_dark_outline !rounded-none uppercase regular-14 tracking-widest"
+                >
                   Add to cart
                 </button>
                 <button className="btn_dark_rounded !rounded-none uppercase regular-14 tracking-widest">
@@ -69,17 +131,22 @@ const ProductDisplay = (props) => {
                 </button>
               </div>
               <p>
-                <span className='medium-16 text-tertiary'>Category:</span> Women | Jacket | Winter
+                <span className="medium-16 text-tertiary">Category:</span> Women
+                | Jacket | Winter
               </p>
               <p>
-                <span className='mediuim-16 text-tertiary'>Category:</span> Modern | Latest
+                <span className="medium-16 text-tertiary">Category:</span>{" "}
+                Modern | Latest
               </p>
             </div>
           </div>
         </div>
       </div>
+
+      {/* Toast Notification Container */}
+      <ToastContainer position="top-right" />
     </section>
   );
-}
+};
 
-export default ProductDisplay
+export default ProductDisplay;
