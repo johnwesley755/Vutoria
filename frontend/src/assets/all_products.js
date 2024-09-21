@@ -35,6 +35,15 @@ import p34_img from "./product_34.png";
 import p35_img from "./product_35.png";
 import p36_img from "./product_36.png";
 
+import img1 from "./img1.webp";
+import img2 from "./img2.webp";
+import img3 from "./img3.webp";
+import img4 from "./img4.webp";
+import img5 from "./img5.webp";
+import img6 from "./img6.webp";
+import img7 from "./img7.webp";
+import img8 from "./img8.webp";
+
 let all_products = [
   {
     id: 1,
@@ -134,49 +143,55 @@ let all_products = [
   },
   {
     id: 13,
-    name: "Men Green Solid Zippered Full-Zip Slim Fit Bomber Jacket",
+    name: "Men Green Solid Colored Half Sleeve T-Shirt",
     category: "men",
+    updatedImg : img1,
     image: p13_img,
     new_price: 85.0,
     old_price: 120.5,
   },
   {
     id: 14,
-    name: "Men Green Solid Zippered Full-Zip Slim Fit Bomber Jacket",
+    name: "Men Red Street look Casual Shirt",
     category: "men",
+    updatedImg : img2,
     image: p14_img,
     new_price: 85.0,
     old_price: 120.5,
   },
   {
     id: 15,
-    name: "Men Green Solid Zippered Full-Zip Slim Fit Bomber Jacket",
+    name: "Black Suits with White Shirt",
     category: "men",
+    updatedImg : img3,
     image: p15_img,
     new_price: 85.0,
     old_price: 120.5,
   },
   {
     id: 16,
-    name: "Men Green Solid Zippered Full-Zip Slim Fit Bomber Jacket",
+    name: "Yellow Solid Colored T-Shirt",
     category: "men",
     image: p16_img,
+    updatedImg : img4,
     new_price: 85.0,
     old_price: 120.5,
   },
   {
     id: 17,
-    name: "Men Green Solid Zippered Full-Zip Slim Fit Bomber Jacket",
+    name: "Navy Blue Suits with Blue Shirt",
     category: "men",
     image: p17_img,
+    updatedImg : img5,
     new_price: 85.0,
     old_price: 120.5,
   },
   {
     id: 18,
-    name: "Men Green Solid Zippered Full-Zip Slim Fit Bomber Jacket",
+    name: "Grey Solid Colored T-Shirt with Green jean coat layering",
     category: "men",
     image: p18_img,
+    updatedImg : img6,
     new_price: 85.0,
     old_price: 120.5,
   },
@@ -185,20 +200,22 @@ let all_products = [
     name: "Men Green Solid Zippered Full-Zip Slim Fit Bomber Jacket",
     category: "men",
     image: p19_img,
+    updatedImg: img7,
     new_price: 85.0,
     old_price: 120.5,
   },
   {
     id: 20,
-    name: "Men Green Solid Zippered Full-Zip Slim Fit Bomber Jacket",
+    name: "Navy Blue Jacket with White T-Shirt",
     category: "men",
     image: p20_img,
+    updatedImg : img8,
     new_price: 85.0,
     old_price: 120.5,
   },
   {
     id: 21,
-    name: "Men Green Solid Zippered Full-Zip Slim Fit Bomber Jacket",
+    name: "Blue Suits with Pink Shirt",
     category: "men",
     image: p21_img,
     new_price: 85.0,
@@ -206,7 +223,7 @@ let all_products = [
   },
   {
     id: 22,
-    name: "Men Green Solid Zippered Full-Zip Slim Fit Bomber Jacket",
+    name: "White Hoodie ",
     category: "men",
     image: p22_img,
     new_price: 85.0,
@@ -214,7 +231,7 @@ let all_products = [
   },
   {
     id: 23,
-    name: "Men Green Solid Zippered Full-Zip Slim Fit Bomber Jacket",
+    name: "Men Blue T-Shirt",
     category: "men",
     image: p23_img,
     new_price: 85.0,
@@ -222,7 +239,7 @@ let all_products = [
   },
   {
     id: 24,
-    name: "Men Green Solid Zippered Full-Zip Slim Fit Bomber Jacket",
+    name: "Black Leather Jacket ",
     category: "men",
     image: p24_img,
     new_price: 85.0,

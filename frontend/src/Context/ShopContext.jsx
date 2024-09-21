@@ -22,7 +22,6 @@ const ShopContextProvider = (props) => {
   // Add an item to the cart
   const addToCart = (itemId) => {
     setCartItems((prev) => ({ ...prev, [itemId]: prev[itemId] + 1 }));
-    toast.info("Product Added to the Cart Successfully")
     console.log(cartItems);
   };
 

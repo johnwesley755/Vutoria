@@ -78,19 +78,22 @@
 import { useState } from 'react';
 import { signInWithEmailAndPassword } from 'firebase/auth';
 import { auth } from "../firebaseConfig"; 
-import { Link } from 'react-router-dom'; 
+import { Link, useNavigate } from 'react-router-dom'; 
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 const Logout = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-
+  const navigate = useNavigate();
   const handleSignIn = async (e) => {
     e.preventDefault();
     try {
       const userCredential = await signInWithEmailAndPassword(auth, email, password);
       toast.success("Signed in successfully!");
+      setTimeout(() => {
+        navigate('/'); 
+      }, 2000); // 2000 milliseconds = 2 seconds
       console.log(userCredential.user);
     } catch (error) {
       toast.error(error.message);

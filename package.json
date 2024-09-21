@@ -1,6 +1,7 @@
 {
   "dependencies": {
     "firebase": "^10.13.2",
+    "react-compare-slider": "^3.1.0",
     "react-toastify": "^10.0.5"
   }
 }
