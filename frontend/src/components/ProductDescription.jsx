@@ -3,7 +3,7 @@ import { Facebook, Instagram, Twitter } from "@mui/icons-material";
 import Slider from "@mui/material/Slider";
 
 const ProductDescription = () => {
-  const [price, setPrice] = useState(250); // Initial product price
+  const [price, setPrice] = useState(100); // Initial product price
   const offerAmount = 50; // Fixed offer/cashback amount
 
   // Handle price change from slider
@@ -35,7 +35,7 @@ const ProductDescription = () => {
             className="max-w-xs mt-4"
           />
           <p className="mt-4 text-lg font-bold">
-            Adjusted Price: ₹{price} + ₹{offerAmount} = ₹{price + offerAmount}
+            Adjusted Price: ₹{offerAmount} + ₹{price} = ₹{price + offerAmount}
           </p>
         </div>
 

@@ -14,6 +14,7 @@ import womenImg from "./assets/bannerwomens.png";
 import kidsImg from "./assets/bannerkids.png";
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import BuyItNow from "./components/buyItNow";
 
 
 const App = () => {
@@ -42,6 +43,7 @@ const App = () => {
           <Route path="/cart-page" element={<Cart />} />
           <Route path="/login" element={<Login />} />
           <Route path="/logout" element={<Logout />} />
+          <Route path="/BuyProcess" element={<BuyItNow />} />
         </Routes>
         <Footer />
       </BrowserRouter>
