@@ -188,10 +188,6 @@
 
 import React, { useState, useEffect, useContext } from "react";
 import { useNavigate } from "react-router-dom";
-import product_rt_1 from "../assets/product_rt_1.png";
-import product_rt_2 from "../assets/product_rt_2.png";
-import product_rt_3 from "../assets/product_rt_3.png";
-import product_rt_4 from "../assets/product_rt_4.png";
 import { MdStar } from "react-icons/md";
 import { ShopContext } from "../Context/ShopContext";
 import { toast, ToastContainer } from "react-toastify";
