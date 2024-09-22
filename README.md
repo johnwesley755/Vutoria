@@ -101,4 +101,3 @@ Feel free to reach out with any questions or suggestions!
 
 ---
 
-This README now includes emojis for a more engaging and visually appealing experience.
