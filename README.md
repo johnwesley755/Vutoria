@@ -41,7 +41,7 @@ frontend/
 
 1. **Clone the repository**:
    ```bash
-  [ git clone https://github.com/johnwesley755/vutoria-web-app.git ]
+   git clone https://github.com/johnwesley755/vutoria-web-app.git
    cd frontend
    ```
 
