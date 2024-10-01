@@ -2,7 +2,7 @@ import React, { useState, useContext } from "react";
 import { Link, NavLink } from "react-router-dom";
 import Navbar from "./Navbar";
 import { MdClose, MdMenu } from "react-icons/md";
-import { FaOpencart } from "react-icons/fa";
+import {  FaOpencart, FaTshirt} from "react-icons/fa";
 import { ShopContext } from "../Context/ShopContext";
 // Import images
 import logo from "../assets/logo.png";
@@ -66,12 +66,18 @@ const Header = () => {
           )}
 
           <div className="flexBetween sm:gap-x-6 cursor-pointer hover:text-secondary">
+            <NavLink to={"wardrobe-page"} className={"flex"}>
+              <FaTshirt className="p-1 h-8 w-8 ring-slate-900/30 ring-1 rounded-full" />
+            
+            </NavLink>
+
             <NavLink to={"cart-page"} className={"flex"}>
               <FaOpencart className="p-1 h-8 w-8 ring-slate-900/30 ring-1 rounded-full" />
               <span className="relative flexCenter w-5 h-5 rounded-full bg-secondary text-white medium-14 -top-2">
                 {getTotalCartItems()}
               </span>
             </NavLink>
+
 
             {isAuthenticated ? (
               <NavLink
