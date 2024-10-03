@@ -72,7 +72,6 @@ const Header = () => {
                 {getTotalCartItems()}
               </span>
             </NavLink>
-
             {isAuthenticated ? (
               <NavLink
                 to={"/logout"}

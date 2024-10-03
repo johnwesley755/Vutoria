@@ -1,7 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { FaSearch } from "react-icons/fa";
-
 const Item = ({ id, name, image, old_price, new_price }) => {
   return (
     <div className="rounded-xl overflow-hidden shadow-lg">
