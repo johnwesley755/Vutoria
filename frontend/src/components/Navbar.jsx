@@ -41,6 +41,7 @@ const Navbar = ({ containerStyles }) => {
           Kids
         </div>
       </NavLink>
+    
     </nav>
   );
 };

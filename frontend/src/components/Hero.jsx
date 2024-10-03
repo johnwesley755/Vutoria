@@ -2,10 +2,17 @@ import React from "react";
 import Slider from "react-slick"; // Import react-slick for the slider
 
 // Import your images here
+<<<<<<< HEAD
 import img1 from "../assets/slider1.jpg";
 import img2 from "../assets/slider2.jpg";
 import img3 from "../assets/slider3.jpg";
 import img4 from "../assets/slider4.jpg";
+=======
+import img1 from "../assets/3.png";
+import img2 from "../assets/4.png";
+import img3 from "../assets/5.png";
+import img4 from "../assets/6.png";
+>>>>>>> 706c35e890396379dbd5131e805203898525d379
 
 // Include slick-carousel CSS
 import "slick-carousel/slick/slick.css";
@@ -60,10 +67,16 @@ const Hero = () => {
         </Slider>
       </section>
 
+<<<<<<< HEAD
       {/* Text Content Below Image Slider */}
       <section className=" text-black">
         <div className="max-w-7xl mx-auto text-center px-4">
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
+=======
+      <section className=" text-black">
+        <div className="max-w-7xl mx-auto text-center px-4">
+          <h2 className="text-4xl md:text-7xl font-bold mb-4">
+>>>>>>> 706c35e890396379dbd5131e805203898525d379
             Find Your Style with Vutoria
           </h2>
           <p className="mb-6 text-lg md:text-xl">

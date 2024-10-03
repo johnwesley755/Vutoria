@@ -27,8 +27,8 @@ const ShopContextProvider = (props) => {
 
   // Remove an item from the cart
   const removeFromCart = (itemId) => {
-    setCartItems((prev) => ({ ...prev, [itemId]: prev[itemId] - 1 }));
     toast.warning("Product Removed from the Cart Successfully")
+    setCartItems((prev) => ({ ...prev, [itemId]: prev[itemId] - 1 }));
 
   };
 

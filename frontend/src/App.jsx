@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Header from "./components/Header";
 import Home from "./pages/Home";
 import Category from "./pages/Category";
+import Wardrobe from "./pages/wardrobe";
 import Cart from "./pages/Cart";
 import Product from "./pages/Product";
 import Login from "./pages/Login";
@@ -22,6 +23,7 @@ const App = () => {
     <main className="bg-primary text-tertiary">
       <ToastContainer></ToastContainer>
       <BrowserRouter>
+        {/* <Category category="men" /> */}
         <Header />
         <Routes>
           <Route path="/" element={<Home />} />
@@ -44,6 +46,7 @@ const App = () => {
           <Route path="/login" element={<Login />} />
           <Route path="/logout" element={<Logout />} />
           <Route path="/BuyProcess" element={<BuyItNow />} />
+          <Route path="/wardrobe-page" element={<Wardrobe category ="wardrobe" />} />
         </Routes>
         <Footer />
       </BrowserRouter>

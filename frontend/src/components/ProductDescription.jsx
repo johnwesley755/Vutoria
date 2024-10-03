@@ -4,7 +4,7 @@ import Slider from "@mui/material/Slider";
 
 const ProductDescription = () => {
   const [price, setPrice] = useState(100); // Initial product price
-  const offerAmount = 50; // Fixed offer/cashback amount
+  const offerAmount = 85; // Fixed offer/cashback amount
 
   // Handle price change from slider
   const handlePriceChange = (event, newValue) => {
