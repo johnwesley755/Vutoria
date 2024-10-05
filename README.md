@@ -69,17 +69,19 @@ frontend/
 ## 📦 Installed Packages
 
 ```json
-"dependencies": {
-  "@emotion/react": "^11.13.3",
-  "@emotion/styled": "^11.13.0",
-  "@mui/icons-material": "^6.1.0",
-  "@mui/material": "^6.1.0",
-  "react": "^18.3.1",
-  "react-before-after-slider-component": "^1.1.8",
-  "react-dom": "^18.3.1",
-  "react-icons": "^5.3.0",
-  "react-router-dom": "^6.26.2"
-}
+  "dependencies": {
+    "@emotion/react": "^11.13.3",
+    "@emotion/styled": "^11.13.0",
+    "@mui/icons-material": "^6.1.0",
+    "@mui/material": "^6.1.0",
+    "react": "^18.3.1",
+    "react-before-after-slider-component": "^1.1.8",
+    "react-dom": "^18.3.1",
+    "react-icons": "^5.3.0",
+    "react-router-dom": "^6.26.2",
+    "react-slick": "^0.30.2",
+    "slick-carousel": "^1.8.1"
+  },
 ```
 
 ## 📊 Features in Progress
