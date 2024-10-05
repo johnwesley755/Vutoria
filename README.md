@@ -95,7 +95,7 @@ frontend/
 
 ## 👨‍💻 Author
 
-Developed by **John Wesley and Lankesh** ✨
+Developed by **John Wesley, Mohammed Habib and Lankesh** ✨
 
 Feel free to reach out with any questions or suggestions!
 
