@@ -1,4 +1,4 @@
-# 🛍️ E-commerce Platform - Frontend with React, Tailwind & Material UI 🚀
+# 🛍️ Vutoria (AI-based virtual try - on)  - Frontend with React, Tailwind & Material UI 🚀
 
 ## Overview 📝
 This project is a modern e-commerce platform designed to deliver a smooth and engaging shopping experience for users. Built using the **MERN stack** (React for frontend), styled with **Tailwind CSS** and **Material UI** for advanced UI components, this platform integrates advanced features like **virtual try-on**, **social media sharing**, and more. Key areas for future improvements include payment gateway integration and deployment to a production environment.
